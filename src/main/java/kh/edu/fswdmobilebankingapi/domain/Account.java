@@ -1,29 +1,32 @@
 package kh.edu.fswdmobilebankingapi.domain;
 
 import jakarta.persistence.*;
+//import kh.edu.fswdmobilebankingapi.controller.AccountType;
+//import kh.edu.fswdmobilebankingapi.enums.AccountType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
 public class Account {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String actNo;
-    private double balance;
+    private String accNum;
+    private Boolean isDeleted;
     private BigDecimal overLimit;
-    private boolean isDeleted;
 
-    //mappedBy ចងគ្នាទៅវិញទៅមក
     @ManyToOne
-    @JoinColumn(name = "cust_id", referencedColumnName = "id")
     private Customer customer;
+
+
+    @ManyToOne
+//    @JoinColumn(name = "account_type_id")
+    private AccountType accountType;
+
 }

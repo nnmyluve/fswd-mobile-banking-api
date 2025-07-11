@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -26,10 +27,10 @@ public class Customer {
     @Column(unique = true, length = 100)
     private String email;
 
-    @Column(unique = true, length = 10)
+    @Column(unique = true, length = 15)
     private String phoneNumber;
 
-    @Column(nullable = false, length = 2)
+    @Column(nullable = false, length = 10)
     private String gender;
 
     @Column(nullable = false)
@@ -45,4 +46,9 @@ public class Customer {
     @OneToOne(mappedBy = "customer")
     private KYC kyc;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 1)
+
+    public void setAccounts(ArrayList<Object> objects) {
+    }
 }
