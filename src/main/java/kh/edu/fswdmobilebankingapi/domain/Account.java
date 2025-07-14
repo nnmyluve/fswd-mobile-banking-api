@@ -20,6 +20,9 @@ public class Account {
     private String accNum;
     private Boolean isDeleted;
     private BigDecimal overLimit;
+    private String actNo;
+
+
 
     @ManyToOne
     private Customer customer;
@@ -28,5 +31,6 @@ public class Account {
     @ManyToOne
 //    @JoinColumn(name = "account_type_id")
     private AccountType accountType;
+
 
 }
