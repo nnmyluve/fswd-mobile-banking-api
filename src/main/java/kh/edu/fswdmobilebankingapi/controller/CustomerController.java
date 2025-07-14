@@ -36,4 +36,10 @@ public class CustomerController {
         return customerService.createNew(createCustomerRequest);
     }
 
+//
+//  @ResponseStatus(HttpStatus.NO_CONTENT)
+//    @PostMapping("phoneNumber")
+//    public void disableByPhoneNumber(@PathVariable String phoneNumber){
+//      customerService.disableByPhoneNunber(phoneNumber);
+//  }
 }

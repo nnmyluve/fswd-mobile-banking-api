@@ -7,7 +7,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 
-public class ServiceException extends RuntimeException {
+public class ServiceException {
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<?> handleServiceException(

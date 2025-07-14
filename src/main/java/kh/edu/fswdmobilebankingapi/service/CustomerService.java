@@ -7,6 +7,8 @@ import kh.edu.fswdmobilebankingapi.dto.UpdateCustomerRequest;
 import java.util.List;
 
 public interface CustomerService {
+//
+//    void disableByPhoneNunber(String phoneNumber);
 
     CustomerResponse updateByPhoneNumber(
             String phoneNumber,

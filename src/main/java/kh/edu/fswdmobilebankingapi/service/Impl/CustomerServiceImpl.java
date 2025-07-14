@@ -24,6 +24,15 @@ public class CustomerServiceImpl implements CustomerService {
     private final CustomerRepository customerRepository;
     private final CustomerMapper customerMapper;
 
+//
+//    @Override
+//    public void disableByPhoneNunber(String phoneNumber) {
+//        if (!customerRepository.existsByPhoneNumber(phoneNumber)) {
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Phone number not found");
+//        }
+//        customerRepository.disableByPhoneNumber(phoneNumber);
+//    }
+
     @Override
     public CustomerResponse updateByPhoneNumber(String phoneNumber, UpdateCustomerRequest updateCustomerRequest) {
         Customer customer = customerRepository

@@ -22,8 +22,6 @@ public class Account {
     private BigDecimal overLimit;
     private String actNo;
 
-
-
     @ManyToOne
     private Customer customer;
 

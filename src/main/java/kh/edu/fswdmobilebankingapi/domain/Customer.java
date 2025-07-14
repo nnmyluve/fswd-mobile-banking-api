@@ -22,7 +22,7 @@ public class Customer {
     private String email;
     private String phoneNumber;
     private String gender;
-
-    // Optional fields you might need
     private String remarks;
+    private boolean isDeleted;
+
 }

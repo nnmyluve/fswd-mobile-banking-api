@@ -17,6 +17,6 @@ public class TransactionType {
     @Column(nullable = false, unique = true, length = 50)
     private String name;  // e.g., PAYMENT, TRANSFER,
 
-    @Column(length = 255)
+    @Column(length = 250)
     private String description;
 }
